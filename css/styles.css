@@ -1,7 +1,15 @@
 @import "./buttons.css";
+@import "./videobar.css";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Lato&display=swap');
 
 body {
   background-color: #43DDE6;
+  margin: 0;
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -28,6 +36,8 @@ body {
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
 }
 
 .player-actions {
@@ -43,12 +53,13 @@ body {
   position: absolute;
   inset-inline: 0;
   inset-block-end: 0;
-  padding: 10px;
+  padding: 30px 20px;
   display: flex;
 }
 
 .player-progress input {
   flex: 1;
+  cursor: pointer;
 }
 
 .player-controls {
@@ -60,4 +71,23 @@ body {
 
 .player:hover .player-controls {
   opacity: 1;
+}
+
+.top-circle,
+.bottom-circle {
+  position: absolute;
+  inline-size: 700px;
+  block-size: 700px;
+  border: 80px solid rgba(0, 0, 0, .1);
+  border-radius: 50%;
+}
+
+.top-circle {
+  top: -75%;
+  left: -20%;
+}
+
+.bottom-circle {
+  bottom: -65%;
+  right: -20%;
 }

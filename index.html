@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+  <div class="top-circle"></div>
+  <div class="bottom-circle"></div>
   <div class="wrapper">
     <div class="player">
-      <video id="video" poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80" src='https://media.w3.org/2010/05/sintel/trailer.mp4' width="400"></video>
+      <video id="video" poster="./images/poster.png" src='https://media.w3.org/2010/05/sintel/trailer.mp4' width="400"></video>
       <div class="player-controls">
-        <h2 class="player-title">Música para Programar</h2>
+        <h2 class="player-title">Sintel Trailer - Durian Open Movie Team</h2>
         <div class="player-actions">
           <button class="button" id="backward" hidden aria-label="Retroceder 10 segundos" title="Retroceder 10 segundos"></button>
           <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
@@ -21,6 +23,10 @@
         </div>
         <div class="player-progress">
           <input type="range" min='0' value='0' step=".1" id='progress'>
+          <div class="selector-wrapper">
+            <div class="selector">0:00</div>
+            <div class="progress-bar"></div>
+          </div>
         </div>
       </div>
     </div>
